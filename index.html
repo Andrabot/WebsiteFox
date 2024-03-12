@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Website</title>
+    <style>
+    body {
+      background-image: url('image/bck.jpg');
+      background-size: 120%;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .event-logo {
+            width: 100%;
+            max-width: 1600px; /* Untuk dua logo */
+            height: auto;
+            white-space: nowrap;
+            animation: slide 35s linear infinite;
+        }
+
+        .event-logo img {
+            width: 100%; /* Untuk dua logo */
+            height: auto;
+            display: inline-block;
+            vertical-align: top;
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5),
+              0px 0px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(2%);
+            }
+            100% {
+                transform: translateX(-105%);
+            }
+        }
+
+        .app-logos {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .app-logos img {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            box-shadow: white 4px 4px 3px;
+            border-radius: 20px;
+        }
+
+        .rules {
+            margin-top: 20px;
+            color: white;
+            background-color: #424246;
+            border-radius: 20px;
+            box-shadow: black 4px 4px 25px;
+        }
+
+        .rules h2 {
+            font-size: 18px;
+            text-align: center;
+            background-color: #83848C;
+            border-radius: 20px;
+            box-shadow: black 5px 5px 5px;
+        }
+
+        .rules ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .rules li {
+            margin-bottom: 10px;
+            text-shadow: black 4px 4px 10px;
+        }
+        
+        a:focus {
+          border: 2px solid purple;
+          border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="event-logo">
+            <img src="image/event1.jpg" alt="Event Logo 1">
+            <img src="image/event2.jpg" alt="Event Logo 2">
+        </div>
+        <div class="app-logos">
+            <a href="Cid.html"><img src="image/cid.png" alt="App Logo 1"></a>
+            <a href="Rdp.html"><img src="image/rdp.png" alt="App Logo 2"></a>
+            </div>
+            <div class="app-logos">
+            <a href="socks.html"><img src="image/socks.png" alt="App Logo 3"></a>
+            <a href="License.html"><img src="image/licen.png" alt="App Logo 4"></a>
+        </div>
+        <div class="rules">
+            <h2>TENTANG AUTO</h2>
+            <ul>
+                <li>WHAT RDP? RDP SEMACAM KITA SEWA PC ATAU RENTAL</li>
+                <li>WHAT LICENSE? LICENSE ADALAH KUNCI UNTUK MENDAPATKAN AKSES KE APK MULTIBOT</li>
+                <li>WHAT SOCKS? SOCKS SEMACAM SEWA IP AGAR BOT KITA BISA ONLINE </li>
+                <li>WHAT CID? CID ADALAH ACCOUNT GT LEVEL KECIL YANG BARU DI BIKIN</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

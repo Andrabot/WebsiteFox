@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pembelian</title>
+    <style>
+        body {
+            background-image: url('image/bck.jpg');
+            background-size: 120%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background-color: #232322; /* Warna latar formulir */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 400px;
+            text-align: center; /* Untuk mengatur logo ke tengah */
+            color: white;
+        }
+
+        input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: purple; /* Warna tombol */
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #pink; /* Warna saat hover */
+        }
+        
+        #item_name {
+          font-weight: bold;
+          text-align: center;
+          font-size: 25px;
+        }
+        
+        label {
+    font-size: 18px; /* Atur ukuran font label */
+}
+
+select {
+    font-size: 20px; /* Atur ukuran font elemen select */
+    text-align: center;
+    font-weight: bold;
+    width: 350px; /* Atur lebar elemen select */
+    padding: 8px; /* Atur padding untuk meningkatkan ukuran elemen select */
+}
+    </style>
+</head>
+<body>
+
+<form id="purchaseForm">
+    <img src="image/cid.png" alt="Logo" style="max-width: 100%; height: auto; border-radius: 20px;">
+    <h2>ISI FORMULIR DULU ABANGKUH</h2>
+    <label for="item_name">NAMA ITEM:</label><br>
+    <input type="text" id="item_name" name="item_name" readonly><br>
+    <label for="item_name">SPEK ITEM:</label><br>
+    <select id="ram" name="ram">
+  <option value="2/4">LV2 -> 20wl</option>
+  <option value="4/8">LV12 -> 80wl</option>
+  <option value="8/16">LV15 -> 120wl</option><br></select>
+    <br><label for="whatsapp_number">JUMLAH:</label><br>
+    <input type="text" id="whatsapp_number" name="whatsapp_number" required><br>
+    <input type="submit" value="Buy">
+</form>
+
+<script>
+    document.getElementById("purchaseForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var itemName = document.getElementById("item_name").value;
+        var spekItem = document.getElementById("ram").options[document.getElementById("ram").selectedIndex].text;
+        var whatsappNumber = document.getElementById("whatsapp_number").value;
+        var message = encodeURIComponent("NAMA ITEM: " + itemName + "\nSPEK ITEM: " + spekItem + "\nJUMLAH: " + whatsappNumber);
+        window.location.href = "https://wa.me/6283139270060/?text=" + message;
+    });
+    document.getElementById("item_name").value = "CID / TUYUL";
+document.getElementById("item_name").readOnly = true;
+</script>
+
+</body>
+</html>
